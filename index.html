@@ -4,21 +4,47 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
    <title>Random Cat Gif Generator</title>
 </head>
 
 <body>
+   <h1>Random Cat Gif Generator</h1>
    <img src="#" alt="Random cat Gif">
+   <h3>Cat's not your thing? Search for something else:</h3>
+   </h1>
+   <div class="new-image">
+      <input type="text">
+      <button>Generate</button>
+   </div>
+
+
    <script>
+
       const img = document.querySelector('img');
-      fetch('https://api.giphy.com/v1/gifs/translate?api_key=G2oXi2ymwPBe3rsxQGcUYk7k86etVwiX&s&s=cats', { mode: 'cors' })
-         .then(function (response) {
-            return response.json();
-         })
-         .then(function (response) {
-            img.src = response.data.images.original.url
-         });
+      const button = document.querySelector('button');
+      button.addEventListener('click', e => {
+         randomCat()
+      })
+
+      const randomCat = function () {
+         fetch('https://api.giphy.com/v1/gifs/translate?api_key=G2oXi2ymwPBe3rsxQGcUYk7k86etVwiX&s&s=cats', { mode: 'cors' })
+            .then(response => {
+               return response.json();
+            })
+            .then(response => {
+               img.src = response.data.images.original.url
+            })
+            .catch(error => {
+               console.log(`Error: ${error}`)
+            })
+      }
+
+
+
+      randomCat();
    </script>
 </body>
 

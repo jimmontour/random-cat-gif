@@ -5,9 +5,39 @@
 }
 
 body {
-   background-color: #e6d8e7;
+   background:  black url("/img/space.jpg") repeat;
+   width: 500px;
+   margin: 0 auto;
    height: 90vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Bodoni Moda', serif;
+   color: white;
+}
+
+h1 {
+   margin-bottom: 2rem;
+}
+
+h3 {
+   margin: 2rem 0;
+}
+
+.new-image {
    display: flex;
    align-items: center;
    justify-content: center;
+   width: 100%
+}
+
+input {
+   height: 2rem;
+   padding-left: 20px;
+}
+
+button {
+   height: 2rem;
+   width: 25%;
 }
