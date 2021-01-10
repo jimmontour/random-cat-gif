@@ -1,0 +1,25 @@
+{
+   "name": "random-cat-gif",
+   "version": "1.0.0",
+   "description": "**Random Cat Gif Generator**\r ---\r This was a small project from The Odin Project to learn how to use the Fetch API to incorporate the Giphy API onto a browser page.",
+   "main": "script.js",
+   "eslintConfig": {
+      "extends": [
+         "wesbos"
+      ]
+   },
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jimmontour/random-cat-gif.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/jimmontour/random-cat-gif/issues"
+   },
+   "homepage": "https://github.com/jimmontour/random-cat-gif#readme"
+}
