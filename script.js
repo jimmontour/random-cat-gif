@@ -7,23 +7,16 @@ const subTitle = document.querySelector('h3');
 const loadingPrompt = document.querySelector('.loading');
 let searchTerm = 'cats';
 
-const randomImg = function () {
-  fetch(
+async function randomImg() {
+  const response = await fetch(
     `https://api.giphy.com/v1/gifs/translate?api_key=G2oXi2ymwPBe3rsxQGcUYk7k86etVwiX&s&s=${searchTerm}`,
     { mode: 'cors' }
-  )
-    .then((response) => response.json())
-    .then((response) => {
-      img.src = response.data.images.original.url;
-      catBtn.style.display = 'block';
-      loadingPrompt.innerText = '';
-      console.log('loaded');
-    })
-    .catch((error) => {
-      console.log(`Error: ${error}`);
-      img.src = 'lost-cat.jpg';
-    });
-};
+  );
+  const imgData = await response.json();
+  img.src = imgData.data.images.original.url;
+  catBtn.style.display = 'block';
+  loadingPrompt.innerText = '';
+}
 
 const generateImg = function () {
   const subject = input.value.console.log(subject);
