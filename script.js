@@ -21,6 +21,7 @@ const randomImg = function () {
     })
     .catch((error) => {
       console.log(`Error: ${error}`);
+      img.src = '/img/lost-cat.jpg';
     });
 };
 
