@@ -13,39 +13,15 @@
 <body>
    <h1>Random Cat Gif Generator</h1>
    <img src="#" alt="Random cat Gif">
-   <h3>Cat's not your thing? Search for something else:</h3>
+   <p class="loading"></p>
+   <button class="more-cats">More!</button>
+   <h3>Generate something else:</h3>
    </h1>
    <div class="new-image">
       <input type="text">
-      <button>Generate</button>
+      <button class="generate">Generate</button>
    </div>
-
-
-   <script>
-
-      const img = document.querySelector('img');
-      const button = document.querySelector('button');
-      button.addEventListener('click', e => {
-         randomCat()
-      })
-
-      const randomCat = function () {
-         fetch('https://api.giphy.com/v1/gifs/translate?api_key=G2oXi2ymwPBe3rsxQGcUYk7k86etVwiX&s&s=cats', { mode: 'cors' })
-            .then(response => {
-               return response.json();
-            })
-            .then(response => {
-               img.src = response.data.images.original.url
-            })
-            .catch(error => {
-               console.log(`Error: ${error}`)
-            })
-      }
-
-
-
-      randomCat();
-   </script>
+   <script src="script.js"></script>
 </body>
 
 </html>

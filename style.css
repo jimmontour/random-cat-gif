@@ -22,22 +22,34 @@ h1 {
 }
 
 h3 {
-   margin: 2rem 0;
+   margin: 1rem 0;
+}
+
+img {
+   margin-bottom: 1.5rem;
 }
 
 .new-image {
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 100%
+   width: 100%;
+}
+
+.more-cats {
+      margin-bottom: 6rem;
 }
 
 input {
    height: 2rem;
    padding-left: 20px;
+   font-family: 'Bodoni Moda', serif;
+   font-size: 1.2rem;
 }
 
 button {
    height: 2rem;
    width: 25%;
+   font-family: 'Bodoni Moda', serif;
+   font-size: 1.2rem;
 }
